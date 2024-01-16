@@ -9,23 +9,45 @@ export function Setup() {
     const [newPlayerName, setNewPlayerName] = useState("");
     const navigate = useNavigate();
 
-    // TODO const addNewPlayer
+    const addNewPlayer = () => {
+        if (playersGame.filter(p => p.name === newPlayerName).length === 0) {
+            insertPlayer({
+                name: newPlayerName,
+                gamePoints: 0,
+                turns: 0,
+                gameBiggestTurn: 0,
+            });
+        }
+    }
+
+    const handleNewPlayerInput = () => {
+        if (hasInput && newPlayerName.length > 0) {
+            addNewPlayer();
+            setNewPlayerName("");
+        }
+        setHasInput(!hasInput);
+        setNewPlayerName(""); 
+    }
+    
+    const handleAddNewPlayerButton = (e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        e.preventDefault();
+        handleNewPlayerInput();
+    }
+
+    const startGame = () => {
+        setIsRunning(true);
+        navigate("/game");
+    }
 
     useEffect(() => {
         const keyHandler = (e: KeyboardEvent) => {
             if (e.key === "+") {
-                // TODO addNewPlayer by "+"
                 e.preventDefault();
-                setHasInput(!hasInput);
-                setNewPlayerName(""); 
+                handleNewPlayerInput();
             }
             if ((e.key === "s" || e.key === "S") && !hasInput) {
                 e.preventDefault();
-                if (isRunning) {
-                    finish();
-                } else {
-                    startGame();
-                }
+                startGame();
             }
         };
         document.addEventListener("keypress", keyHandler);
@@ -33,7 +55,7 @@ export function Setup() {
         return () => {
           document.removeEventListener("keypress", keyHandler);
         };
-    }, [hasInput, isRunning]);
+    }, [hasInput, isRunning, newPlayerName]);
 
     const deselect = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, player: Player) => {
         e.preventDefault();
@@ -43,34 +65,6 @@ export function Setup() {
     const up = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, index: number) => {
         e.preventDefault();
         swapPlayer(index);
-    }
-    
-    function handleAddNewPlayerButton(e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-        e.preventDefault();
-        if (hasInput) {
-            if (newPlayerName.length > 0) {
-                // TODO use addNewPlayer
-                if (playersGame.filter(p => p.name === newPlayerName).length === 0) {
-                    insertPlayer({
-                        name: newPlayerName,
-                        gamePoints: 0,
-                        turns: 0,
-                        gameBiggestTurn: 0,
-                    });
-                }
-                setNewPlayerName("");
-                setHasInput(false);
-            } else {
-                setHasInput(false);
-            }
-        } else {
-            setHasInput(true);
-        }
-    }
-
-    const startGame = () => {
-        setIsRunning(true);
-        navigate("/game");
     }
     
     return (

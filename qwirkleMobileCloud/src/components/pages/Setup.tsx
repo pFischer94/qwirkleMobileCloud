@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Player } from "../../redux/slicer";
 
 export function Setup() {
-    const { playersGame, insertPlayer, deletePlayer, swapPlayer, isRunning, setIsRunning, finish } = useScoreboard();
+    const { playersGame, insertPlayer, deletePlayer, swapPlayer, isRunning, setIsRunning } = useScoreboard();
     const [hasInput, setHasInput] = useState(false);
     const [newPlayerName, setNewPlayerName] = useState("");
     const navigate = useNavigate();

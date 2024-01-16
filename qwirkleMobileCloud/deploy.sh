@@ -1,6 +1,6 @@
 npm run build
 
-connStr='xxx'
+connStr='DefaultEndpointsProtocol=https;AccountName=qwirkle;AccountKey=Jo0xXlvPql6KKA7yE7R8keIE0M5QzpC/qJJNw8BqwhjLlkQTUeT3WW0CAfnAb277XqSysjm5R/bG+ASt2Txgug==;EndpointSuffix=core.windows.net'
 
 az storage blob delete-batch \
     --account-name qwirkle \

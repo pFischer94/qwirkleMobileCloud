@@ -8,6 +8,10 @@ import { useEffect } from 'react'
 // TODO Bilder
 // TODO kleinere Tastatur / Platzproblem ab 5 SpielerInnen
 // TODO Spracherkennung
+// TODO Spieler*in
+// TODO input dauerhaft
+// TODO Farbe Spieler'in
+// TODO padding back mobile
 
 function App() {
 

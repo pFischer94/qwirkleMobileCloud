@@ -37,8 +37,10 @@ export function Setup() {
     }
 
     const startGame = () => {
-        setIsRunning(true);
-        navigate("/game");
+        if (playersGame.length > 1) {
+            setIsRunning(true);
+            navigate("/game");
+        }
     }
 
     useEffect(() => {
@@ -47,7 +49,9 @@ export function Setup() {
                 e.preventDefault();
                 handleNewPlayerInput();
             }
-            if ((e.key === "s" || e.key === "S") && !hasInput) {
+            var nameInput = focusRef.current;
+            let inputIsFocused: boolean = (document.activeElement === nameInput);
+            if (e.key === "#" || (!inputIsFocused && (e.key === "s" || e.key === "S") /* && !hasInput */ )) {
                 e.preventDefault();
                 startGame();
             }
@@ -57,16 +61,18 @@ export function Setup() {
         return () => {
           document.removeEventListener("keypress", keyHandler);
         };
-    }, [hasInput, isRunning, newPlayerName]);
+    }, [ /* hasInput */ , isRunning, newPlayerName, document.activeElement]);
 
     const deselect = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, player: Player) => {
         e.preventDefault();
         deletePlayer(player);
+        focusRef.current?.focus();
     }
 
     const up = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, index: number) => {
         e.preventDefault();
         swapPlayer(index);
+        focusRef.current?.focus();
     }
 
     return (

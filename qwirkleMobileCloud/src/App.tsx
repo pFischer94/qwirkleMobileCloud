@@ -5,8 +5,7 @@ import { RouterProvider } from 'react-router-dom'
 import { router } from './route/routeConfig'
 import { useEffect } from 'react'
 
-// TODO padding back mobile
-// TODO 1. char capital
+// TODO auto keyboard
 // TODO kleinere Tastatur / Platzproblem ab 5 SpielerInnen
 // TODO Bilder
 // TODO Spracherkennung

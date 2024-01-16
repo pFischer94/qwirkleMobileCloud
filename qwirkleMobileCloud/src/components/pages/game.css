@@ -6,6 +6,7 @@ table.game, table.game th, table.adder {
 
 table.game tbody tr:first-child td {
     background-color: goldenrod;
+    color: black;
 }
 
 tr {

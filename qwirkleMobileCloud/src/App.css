@@ -42,6 +42,7 @@ button.start {
 input {
   text-align: center;
   width: 94%;
+  text-transform: capitalize;
 }
 
 input:focus, input:focus-visible {

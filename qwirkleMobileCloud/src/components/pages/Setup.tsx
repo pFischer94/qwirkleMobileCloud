@@ -1,17 +1,13 @@
 import { useEffect, useState } from "react";
-import { useScoreboard } from "../hooks/useScoreboard";
+import { useScoreboard } from "../../hooks/useScoreboard";
 import { useNavigate } from "react-router-dom";
+import { Player } from "../../redux/slicer";
 
 export function Setup() {
-    const { playersGame, insertPlayer, isRunning, setIsRunning, finish } = useScoreboard();
+    const { playersGame, insertPlayer, deletePlayer, swapPlayer, isRunning, setIsRunning, finish } = useScoreboard();
     const [hasInput, setHasInput] = useState(false);
     const [newPlayerName, setNewPlayerName] = useState("");
     const navigate = useNavigate();
-
-    const startGame = () => {
-        setIsRunning(true);
-        navigate("/game");
-    }
 
     // TODO const addNewPlayer
 
@@ -38,6 +34,16 @@ export function Setup() {
           document.removeEventListener("keypress", keyHandler);
         };
     }, [hasInput]);
+
+    const deselect = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, player: Player) => {
+        e.preventDefault();
+        deletePlayer(player);
+    }
+
+    const up = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, index: number) => {
+        e.preventDefault();
+        swapPlayer(index);
+    }
     
     function handleAddNewPlayerButton(e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement, MouseEvent>) {
         e.preventDefault();
@@ -61,14 +67,19 @@ export function Setup() {
             setHasInput(true);
         }
     }
+
+    const startGame = () => {
+        setIsRunning(true);
+        navigate("/game");
+    }
     
     return (
         <div>
             <table>
                 <thead>
                     <tr>
-                        <th></th>
-                        <th>Name</th>
+                        <th className="button"></th>
+                        <th className="name">Name</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -76,9 +87,9 @@ export function Setup() {
 
                     {playersGame.map((p, index) => (
                         <tr key={index}>
-                            <td><button>✕</button></td>
-                            <td className="name">{p.name}</td>
-                            <td>{index > 0 && <button>{"↑"}</button>}</td>
+                            <td><button onClick={(e) => deselect(e, p)}>✕</button></td>
+                            <td className={index % 2 !== 0 ? "name brighter" : "name"}>{p.name}</td>
+                            <td>{index > 0 && <button onClick={(e) => up(e, index)}>{"↑"}</button>}</td>
                         </tr>
                     ))}
 
@@ -99,7 +110,7 @@ export function Setup() {
             </table>
 
             <div className="start">
-                {playersGame.length > 1 && !isRunning && <button>Spiel starten</button>}
+                {playersGame.length > 1 && <button className="start" onClick={startGame}>Spiel starten</button>}
             </div>
 
         </div>

@@ -1,14 +1,49 @@
-th {
-  font-size: x-large;
+th.button {
+  width: var(--button-width);
+}
+
+th.name {
+  background-color: var(--brightBG);
+  height: var(--button-heigth);
+}
+
+td {
+  padding: 0;
+}
+
+td.brighter {
+  background-color: var(--brightBG);
 }
 
 .name {
-  width: 10em;
+  width: var(--name-width);
+  border-radius: var(--border-radius); 
+  overflow: hidden
+}
+
+.points {
+  width: 3em;
+  text-align: end;
+}
+
+button:not(.add) {
+  height: var(--button-heigth);
+  width: var(--button-width);
+  padding: 0;
+}
+
+button.start {
+  width: 8em;
+  background-color: var(--green);
+  color: black;
 }
 
 input {
   text-align: center;
+  width: 94%;
 }
+
+
 
 #root {
   max-width: 1280px;

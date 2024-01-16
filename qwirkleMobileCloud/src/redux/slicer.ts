@@ -25,20 +25,7 @@ const initialState: StateType = {
     isRunning: false,
     activeIndex: 0,
     finishSteps: -1,
-    playersGame: [
-        {
-            name: "Marie",
-            gamePoints: 0,
-            turns: 0,
-            gameBiggestTurn: 0,
-        },
-        {
-            name: "Patrick",
-            gamePoints: 0,
-            turns: 0,
-            gameBiggestTurn: 0,
-        }
-    ],
+    playersGame: [],
     turns: [],
 };
 

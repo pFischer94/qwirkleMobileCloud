@@ -1,4 +1,18 @@
 :root {
+  --brightBG: rgb(70, 70, 70);
+  --border-radius: 8px;
+  --button-heigth: 2.4em;
+  --name-width: 9em;
+  --green: rgba(0,172,0,255);
+  --button-width: 3em;
+  --blue: rgba(0,0,255,255);
+  --red: rgba(255,0,0,255);
+  --borderColor: rgb(133, 133, 133);
+  --borderWidth: 2px;
+  --controlRadius: 20px;
+
+
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -37,7 +51,7 @@ h1 {
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  /* padding: 0.6em 1.2em; */
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../../redux/reduxStore";
-import { Player, deletePlayerGame, insertPlayerGame, resetGame, setActiveIndex, setFinishSteps, setRunning, swapPlayerGame } from "../../redux/slicer";
+import { useAppDispatch, useAppSelector } from "../redux/reduxStore";
+import { Player, deletePlayerGame, insertPlayerGame, resetGame, setActiveIndex, setFinishSteps, setRunning, swapPlayerGame } from "../redux/slicer";
 
 export function useScoreboard() {
   const dispatch = useAppDispatch();

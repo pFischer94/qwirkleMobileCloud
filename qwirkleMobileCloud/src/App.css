@@ -3,7 +3,8 @@ th.button {
 }
 
 th.name {
-  background-color: var(--brightBG);
+  background-color: goldenrod;
+  color: black;
   height: var(--button-heigth);
 }
 
@@ -41,6 +42,10 @@ button.start {
 input {
   text-align: center;
   width: 94%;
+}
+
+input:focus, input:focus-visible {
+  outline: 4px auto var(--borderColor);
 }
 
 

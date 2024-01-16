@@ -1,9 +1,9 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createMemoryRouter } from "react-router-dom";
 import { NotFoundPage } from "./NotFound";
 import { Setup } from "../components/pages/Setup";
 import { Game } from "../components/pages/Game";
 
-export const router = createBrowserRouter([
+export const router = createMemoryRouter([
   {
     path: "/",
     Component: Setup,

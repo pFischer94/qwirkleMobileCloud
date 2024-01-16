@@ -8,7 +8,6 @@ import { useEffect } from 'react'
 // TODO Bilder
 // TODO kleinere Tastatur / Platzproblem ab 5 SpielerInnen
 // TODO Spracherkennung
-// TODO + speichert Person
 // 2 mal f / finish ohne eingabes
 
 function App() {

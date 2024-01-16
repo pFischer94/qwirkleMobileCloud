@@ -6,9 +6,7 @@ import { router } from './route/routeConfig'
 import { useEffect } from 'react'
 
 // TODO padding back mobile
-// TODO focus after buttons
 // TODO 1. char capital
-// TODO s with one player
 // TODO kleinere Tastatur / Platzproblem ab 5 SpielerInnen
 // TODO Bilder
 // TODO Spracherkennung

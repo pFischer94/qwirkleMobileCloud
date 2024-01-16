@@ -10,6 +10,24 @@ export function Game() {
     const [points, setPoints] = useState<string>("");
     const focusRef = useRef<HTMLInputElement>(null);
     const navigate = useNavigate();
+
+    const keyHandler = (e: KeyboardEvent) => {
+        if (e.key === "f" || e.key === "F") {
+            e.preventDefault();
+            startFinish();
+        }
+        if (e.key === "b" || e.key === "B") {
+            e.preventDefault();
+            undoLastTurn();
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener("keypress", keyHandler);
+        return () => {
+            document.removeEventListener("keypress", keyHandler);
+        };
+    }, [turns]);
   
     useEffect(() => {
         window.onbeforeunload = () => "";

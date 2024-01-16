@@ -33,7 +33,7 @@ export function Setup() {
         return () => {
           document.removeEventListener("keypress", keyHandler);
         };
-    }, [hasInput]);
+    }, [hasInput, isRunning]);
 
     const deselect = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, player: Player) => {
         e.preventDefault();

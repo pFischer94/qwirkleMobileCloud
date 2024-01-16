@@ -78,7 +78,15 @@ const shopSlicer = createSlice({
             return state;
         },
         resetGame: (state) => {
-            state = initialState;
+            for (let i = 0; i < state.playersGame.length; i++) {
+                state.playersGame[i].gameBiggestTurn = 0;
+                state.playersGame[i].gamePoints = 0;
+                state.playersGame[i].turns = 0;
+            }
+            state.isRunning = false;
+            state.activeIndex = 0;
+            state.finishSteps = -1;
+            state.turns = [];
             return state;
         },
     }, 

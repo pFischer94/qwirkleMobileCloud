@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+deploy.sh
 *deploy.sh
 *.sh
 qwirkleMobileCloud/deploy.sh

@@ -4,9 +4,6 @@ import { useTurns } from "../../hooks/useTurns";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-// TODO points auf number umstellen
-// TODO Spracherkennung
-
 export function Game() {
     const { playersGame, activeIndex, incrementActiveIndex, finishSteps, decrementFinishSteps, startFinishSteps, finish } = useScoreboard();
     const { executeTurn, turns, undoLastTurn } = useTurns();
@@ -23,8 +20,6 @@ export function Game() {
             navigate("/");
         }
     }, [playersGame.length])
-
-    // console.log(playersGame)
 
     useEffect(() => {
         finishSteps > 0 && setPoints("-");

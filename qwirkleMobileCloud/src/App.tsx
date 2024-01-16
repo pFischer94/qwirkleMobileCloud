@@ -6,8 +6,10 @@ import { router } from './route/routeConfig'
 import { useEffect } from 'react'
 
 // TODO Bilder
-// kleinere Tastatur / Platzproblem ab 5 SpielerInnen
-// Tastensteuerung Game Control
+// TODO kleinere Tastatur / Platzproblem ab 5 SpielerInnen
+// TODO Tastensteuerung Game Control
+// TODO Spracherkennung
+// TODO + speichert Person
 
 function App() {
 

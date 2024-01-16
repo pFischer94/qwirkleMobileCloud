@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useScoreboard } from "../../hooks/useScoreboard";
 import { useNavigate } from "react-router-dom";
 import { Player } from "../../redux/slicer";
@@ -7,6 +7,7 @@ export function Setup() {
     const { playersGame, insertPlayer, deletePlayer, swapPlayer, isRunning, setIsRunning } = useScoreboard();
     const [hasInput, setHasInput] = useState(false);
     const [newPlayerName, setNewPlayerName] = useState("");
+    const focusRef = useRef<HTMLInputElement>(null);
     const navigate = useNavigate();
 
     const addNewPlayer = () => {
@@ -21,7 +22,7 @@ export function Setup() {
     }
 
     const handleNewPlayerInput = () => {
-        if (hasInput && newPlayerName.length > 0) {
+        if (newPlayerName.length > 0) {
             addNewPlayer();
             setNewPlayerName("");
         }
@@ -32,6 +33,7 @@ export function Setup() {
     const handleAddNewPlayerButton = (e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault();
         handleNewPlayerInput();
+        focusRef.current?.focus();
     }
 
     const startGame = () => {
@@ -66,14 +68,14 @@ export function Setup() {
         e.preventDefault();
         swapPlayer(index);
     }
-    
+
     return (
         <div>
             <table>
                 <thead>
                     <tr>
                         <th className="button"></th>
-                        <th className="name">Name</th>
+                        <th className="name">Spieler:in</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -90,12 +92,12 @@ export function Setup() {
                     <tr>
                         <td></td>
                         <td>
-                            {hasInput &&
-                                <form onSubmit={handleAddNewPlayerButton}>
-                                    <input name="name" id="name" type="text" autoComplete="off" autoFocus placeholder="Name" 
+                            {/* {hasInput && */}
+                                <form onSubmit={handleAddNewPlayerButton} className="cursor">
+                                    <input name="name" id="name" type="text" autoComplete="off" autoFocus ref={focusRef} placeholder="Name" 
                                             value={newPlayerName} onChange={e => setNewPlayerName(e.currentTarget.value)}></input>
                                 </form>
-                            }
+                            {/* } */}
                         </td>
                         <td><button onClick={handleAddNewPlayerButton}>+</button></td>
                     </tr>

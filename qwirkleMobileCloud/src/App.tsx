@@ -5,13 +5,13 @@ import { RouterProvider } from 'react-router-dom'
 import { router } from './route/routeConfig'
 import { useEffect } from 'react'
 
-// TODO Bilder
-// TODO kleinere Tastatur / Platzproblem ab 5 SpielerInnen
-// TODO Spracherkennung
-// TODO Spieler*in
-// TODO input dauerhaft
-// TODO Farbe Spieler'in
 // TODO padding back mobile
+// TODO focus after buttons
+// TODO 1. char capital
+// TODO s with one player
+// TODO kleinere Tastatur / Platzproblem ab 5 SpielerInnen
+// TODO Bilder
+// TODO Spracherkennung
 
 function App() {
 

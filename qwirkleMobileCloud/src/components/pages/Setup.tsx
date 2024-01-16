@@ -13,7 +13,7 @@ export function Setup() {
     const addNewPlayer = () => {
         if (playersGame.filter(p => p.name === newPlayerName).length === 0) {
             insertPlayer({
-                name: newPlayerName,
+                name: newPlayerName.charAt(0).toUpperCase() + newPlayerName.substring(1),
                 gamePoints: 0,
                 turns: 0,
                 gameBiggestTurn: 0,

@@ -10,24 +10,6 @@ export function Game() {
     const [points, setPoints] = useState<string>("");
     const focusRef = useRef<HTMLInputElement>(null);
     const navigate = useNavigate();
-
-    const keyHandler = (e: KeyboardEvent) => {
-        if (e.key === "f" || e.key === "F") {
-            e.preventDefault();
-            startFinish();
-        }
-        if (e.key === "b" || e.key === "B") {
-            e.preventDefault();
-            undoLastTurn();
-        }
-    };
-
-    useEffect(() => {
-        document.addEventListener("keypress", keyHandler);
-        return () => {
-            document.removeEventListener("keypress", keyHandler);
-        };
-    }, [turns]);
   
     useEffect(() => {
         window.onbeforeunload = () => "";
@@ -53,7 +35,26 @@ export function Game() {
                 finish();
             }
         }
+        focusRef.current?.focus();
     };
+
+    const keyHandler = (e: KeyboardEvent) => {
+        if (e.key === "f" || e.key === "F") {
+            e.preventDefault();
+            startFinish();
+        }
+        if (e.key === "b" || e.key === "B") {
+            e.preventDefault();
+            undoLastTurn();
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener("keypress", keyHandler);
+        return () => {
+            document.removeEventListener("keypress", keyHandler);
+        };
+    }, [turns, finishSteps]);
 
     const handlePoints = (e: React.ChangeEvent<HTMLInputElement>) => {
         const val = e.target.value;
@@ -121,7 +122,6 @@ export function Game() {
                     <tbody>
                         <tr>
                             <td className="name">
-                                {/* style={{"width" : "8em"}} */}
                                 {playersGame[activeIndex]?.name}:
                             </td>
                             <td>

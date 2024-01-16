@@ -13,7 +13,6 @@ dist-ssr
 *.local
 deploy.sh
 *deploy.sh
-*.sh
 qwirkleMobileCloud/deploy.sh
 
 # Editor directories and files

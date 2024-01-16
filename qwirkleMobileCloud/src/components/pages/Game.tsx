@@ -113,7 +113,7 @@ export function Game() {
                             </td>
                             <td>
                                 <form onSubmit={e => sendTurn(e)}>
-                                    <input id="points" value={points} autoFocus ref={focusRef} autoComplete="off" onChange={handlePoints}></input>
+                                    <input id="points" value={points} inputMode="numeric" autoFocus ref={focusRef} autoComplete="off" onChange={handlePoints}></input>
                                 </form>
                             </td>
                             <td className="add">

@@ -5,6 +5,11 @@ import { RouterProvider } from 'react-router-dom'
 import { router } from './route/routeConfig'
 import { useEffect } from 'react'
 
+// TODO Bilder
+// TODO script for deploy
+// TODO favIcon storage
+// kleinere Tastatur / Platzproblem ab 5 SpielerInnen
+
 function App() {
 
   useEffect(() => {

@@ -71,11 +71,12 @@ div.control {
 button.back {
     border-radius: var(--controlRadius) 0 0 var(--controlRadius);
     background-color: var(--blue);
-    padding: 0 0 0 0.1em;
+    padding: 0.2em 0 0 0.2em;
 }
 
 button.finish {
     border-radius: 0 var(--controlRadius) var(--controlRadius) 0;
     background-color: var(--green);
     padding: 0 0.2em 0.1em 0;
+    color: white;
 }

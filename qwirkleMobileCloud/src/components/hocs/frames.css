@@ -1,0 +1,132 @@
+.test {
+    /* --pink: rgba(171,0,172,255);
+    --blue: rgba(0,0,255,255);
+    --green: rgba(0,172,0,255);
+    --yellow: rgba(255,255,0,255);
+    --orange: rgba(255,137,0,255);
+    --red: rgba(255,0,0,255);
+    --darkBG: #242424;
+    --brightBG: rgb(70, 70, 70);
+
+    --borderColor: rgba(180, 180, 180, 1);
+    --borderWidth: 2px;
+    --controlRadius: 20px;
+    --tdRadius: 10px;
+    --stdBorder: 1px solid;
+
+    --trHeight: 45px;
+    --buttonWidth: 55px;
+    --stdMargin: 57px; */
+
+    display: flex;
+    flex-direction: column;
+    /* margin-bottom: 2em; */
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.4em;
+}
+
+.vertical {
+    min-width: 17.3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vertical img {
+    width: 11em;
+    height: auto;
+    margin-bottom: 0.4em;
+}
+
+.logos-left, .logos-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 1em;
+    gap: 1em;
+}
+
+.logos-left img, .logos-right img {
+    width: 4em;
+    height: auto;
+}
+
+/* div.left {
+    width: 50%;
+    padding-right: 1.3em;
+    padding-bottom: 1.3em;
+    display: flex;
+    justify-content: right;
+    border-right: var(--stdBorder);
+}
+
+div.right {
+    width: 50%;
+    padding-left: 1.3em;
+    padding-bottom: 1.3em;
+    display: flex;
+    justify-content: left;
+} */
+
+/* .table-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.table-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+h3 {
+    margin: 0.4em 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tbody tr {
+    border-bottom: var(--stdBorder);
+    height: var(--trHeight);
+}
+
+tr:last-child {
+    border-bottom: 0;
+}
+
+.id {
+    width: 2em;
+    text-align: right;
+}
+
+.name {
+    width: 6em;
+    padding-left: 0.5em;
+}
+
+.points, .top-zug {
+    width: 5em;
+    text-align: right;
+}
+
+.top-zug {
+    padding-right: 0.5em;
+}
+
+.updown {
+    width: var(--buttonWidth);
+    background-color: var(--darkBG);
+}
+
+td.new {
+    padding-left: 0.5em;
+} */

@@ -124,7 +124,7 @@ export function Game() {
                             <td className="name">
                                 {playersGame[activeIndex]?.name}:
                             </td>
-                            <td>
+                            <td className="game-points">
                                 <form onSubmit={e => sendTurn(e)}>
                                     <input id="points" value={points} inputMode="numeric" autoFocus ref={focusRef} autoComplete="off" onChange={handlePoints}></input>
                                 </form>

@@ -19,7 +19,7 @@ export function withFrames<P extends JSX.IntrinsicAttributes>(
 
         return (
             <main>
-                <div className="horizontal">
+                <div className="horizontal" style={{ transform: window.innerWidth > 1000 ? "scale(2)" : 'scale(1)' }}>
                     <div className="logos-left">
                         <img src={orange} alt="orange logo" />
                         <img src={green} alt="green logo" />

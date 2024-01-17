@@ -113,7 +113,7 @@ export function Game() {
             </table>
 
             <div className="control">
-                <button className="back" onClick={undoLastTurn}>⏮</button>
+                <button className="back" onClick={undoLastTurn}>↩</button>
                 <button className="finish" onClick={startFinish}>✓</button>
             </div>
 

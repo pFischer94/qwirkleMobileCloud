@@ -5,10 +5,11 @@ import { RouterProvider } from 'react-router-dom'
 import { router } from './route/routeConfig'
 import { useEffect } from 'react'
 
-// TODO auto keyboard
-// TODO kleinere Tastatur / Platzproblem ab 5 SpielerInnen
-// TODO Bilder
+// TODO Texte statt variierenden Symbolen
+// TODO button Pille weg
 // TODO Spracherkennung
+// TODO optimize deploy by only loading old and overwriting rest
+// TODO gleiche namen verhindern, wahrscheinlich wegen case
 
 function App() {
 

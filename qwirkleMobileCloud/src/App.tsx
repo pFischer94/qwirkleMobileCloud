@@ -9,7 +9,6 @@ import { useEffect } from 'react'
 // TODO button Pille weg
 // TODO Spracherkennung
 // TODO optimize deploy by only loading old and overwriting rest
-// TODO gleiche namen verhindern, wahrscheinlich wegen case
 // TODO default zoom in desktop
 // TODO style Game page
 

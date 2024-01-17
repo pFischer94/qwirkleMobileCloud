@@ -9,11 +9,10 @@ import { useEffect } from 'react'
 // TODO button Pille weg
 // TODO Spracherkennung
 // TODO optimize deploy by only loading old and overwriting rest
-// TODO default zoom in desktop
-// TODO style Game page
+// TODO Button add points mobile size
 
 function App() {
-
+  
   useEffect(() => {
     window.onbeforeunload = () => "";
   });
@@ -26,3 +25,5 @@ function App() {
 }
 
 export default App
+
+// detail meinung abgeben, was nicht gefallen, zu jedem stibam punkt

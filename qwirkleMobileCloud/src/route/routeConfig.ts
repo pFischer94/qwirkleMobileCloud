@@ -11,7 +11,7 @@ export const router = createMemoryRouter([
   },
   {
     path: "/game",
-    Component: Game,
+    Component: withFrames(Game),
   },
   {
     path: "/*",

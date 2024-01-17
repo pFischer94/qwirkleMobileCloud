@@ -24,14 +24,14 @@ td.game-name {
 }
 
 .game-points {
-    width: 3em;
+    width: var(--pointsWidth);
     text-align: end;
 }
 
 .game-points-turn {
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
     overflow: hidden;
-    width: 3em;
+    width: var(--pointsWidth);
     text-align: end;
 }
 
@@ -42,7 +42,7 @@ td.game-turn {
 
 input#points {
     text-align: end;
-    width: 3em;
+    width: 88%;
 }
 
 td.add {
@@ -50,8 +50,6 @@ td.add {
 }
 
 button.add {
-    margin-left: -0.2em;
-    margin-top: 0.25em;
     padding: 0 0.4em 0.2em 0.4em;
 }
 

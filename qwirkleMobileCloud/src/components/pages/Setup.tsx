@@ -11,7 +11,7 @@ export function Setup() {
     const navigate = useNavigate();
 
     const addNewPlayer = () => {
-        if (playersGame.filter(p => p.name === newPlayerName).length === 0) {
+        if (playersGame.findIndex(p => p.name.toLowerCase() === newPlayerName.toLowerCase()) == -1) {
             insertPlayer({
                 name: newPlayerName.charAt(0).toUpperCase() + newPlayerName.substring(1),
                 gamePoints: 0,

@@ -37,6 +37,7 @@ export function Setup() {
     }
 
     const startGame = () => {
+        handleNewPlayerInput();
         if (playersGame.length > 1) {
             setIsRunning(true);
             navigate("/game");

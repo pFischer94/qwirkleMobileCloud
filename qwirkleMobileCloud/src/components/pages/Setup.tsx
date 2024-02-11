@@ -106,7 +106,7 @@ export function Setup() {
                                 </form>
                             {/* } */}
                         </td>
-                        <td><button onClick={handleAddNewPlayerButton}>+</button></td>
+                        <td><button className="addPlayer" onClick={handleAddNewPlayerButton}>+</button></td>
                     </tr>
 
                 </tbody>

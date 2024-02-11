@@ -113,8 +113,8 @@ export function Game() {
             </table>
 
             <div className="control">
-                <button className="back" onClick={undoLastTurn}>↩</button>
-                <button className="finish" onClick={startFinish}>✓</button>
+                <button className="back" onClick={undoLastTurn}>Rückgängig</button>
+                <button className="finish" onClick={startFinish}>Abschluss</button>
             </div>
 
             {finishSteps !== 0 &&

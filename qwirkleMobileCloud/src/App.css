@@ -33,6 +33,10 @@ button:not(.add) {
   padding: 0;
 }
 
+button.addPlayer {
+  padding-bottom: 0.1em;
+}
+
 button.start {
   width: 8em;
   background-color: var(--green);

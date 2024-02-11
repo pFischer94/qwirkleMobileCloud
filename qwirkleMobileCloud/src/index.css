@@ -3,6 +3,7 @@
   --blue: rgba(0,0,255,255);
   --red: rgba(255,0,0,255);
   --brightBG: rgb(70, 70, 70);
+
   --name-width: 9em;
   --button-width: 2.4em;
   --button-heigth: 2.4em;
@@ -43,6 +44,8 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #242424;
+  color: white;
 }
 
 h1 {
@@ -58,6 +61,7 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
+  color: white;
   cursor: pointer;
   transition: border-color 0.25s;
 }

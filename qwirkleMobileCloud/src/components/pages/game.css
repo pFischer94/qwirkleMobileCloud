@@ -2,6 +2,7 @@ table.game, table.game th, table.adder {
     text-align: start;
     border-collapse: collapse;
     border-spacing: 0;
+    color: white;
 }
 
 table.game tbody tr:first-child td {
@@ -51,30 +52,36 @@ td.add {
 
 button.add {
     padding: 0 0.4em 0.2em 0.4em;
+    margin-left: 0.2em;
+    height: 1.8em;
+    width: 1.8em;
 }
 
 div.control {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    margin: 1em;
+    justify-content: space-between;
+    margin: 1em 0.75em;
 }
 
 .control button {
-    border-color: var(--borderColor);
+    /* border-color: var(--borderColor);
     border-width: var(--borderWidth);
-    border-style: solid;
+    border-style: solid; */
+    color: rgb(200, 200, 200);
 }
 
 button.back {
-    border-radius: var(--controlRadius) 0 0 var(--controlRadius);
+    /* border-radius: var(--controlRadius) 0 0 var(--controlRadius);
+    padding: 0.2em 0 0 0.2em; */
     background-color: var(--blue);
-    padding: 0.2em 0 0 0.2em;
+    width: 7em;
 }
 
 button.finish {
-    border-radius: 0 var(--controlRadius) var(--controlRadius) 0;
-    background-color: var(--green);
+    /* border-radius: 0 var(--controlRadius) var(--controlRadius) 0;
     padding: 0 0.2em 0.1em 0;
-    color: white;
+    color: white; */
+    background-color: var(--green);
+    width: 6.5em;
 }

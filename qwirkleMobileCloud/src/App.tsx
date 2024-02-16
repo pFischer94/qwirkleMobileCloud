@@ -5,8 +5,6 @@ import { RouterProvider } from 'react-router-dom'
 import { router } from './route/routeConfig'
 import { useEffect } from 'react'
 
-// TODO Texte statt variierenden Symbolen
-// TODO button Pille weg
 // TODO Spracherkennung
 // TODO optimize deploy by only loading old and overwriting rest
 // TODO Button add points mobile size
@@ -25,5 +23,3 @@ function App() {
 }
 
 export default App
-
-// detail meinung abgeben, was nicht gefallen, zu jedem stibam punkt
